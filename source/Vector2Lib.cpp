@@ -1,6 +1,12 @@
-#include "../header/Vector2Lib.h"
+// MathFuncsLib.cpp
+// compile with: cl /c /EHsc MathFuncsLib.cpp
+// post-build command: lib MathFuncsLib.obj
 
-namespace nVector2
+//#include "stdafx.h"
+
+#include "Vector2Lib.h"
+
+namespace Vector2
 {
 
 	///////////////
@@ -29,9 +35,8 @@ namespace nVector2
 	//Pre defined direction up
 	Vector2 Vector2::Up()
 	{
-		return Vector2(0.0f, 1.0f);
+		return Vector2(0, 1);
 	}
-
 
 	//Pre defined direction down
 	Vector2 Vector2::Down()

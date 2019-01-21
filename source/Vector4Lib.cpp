@@ -1,4 +1,4 @@
-#include "../header/Vector4Lib.h"
+#include "Vector4Lib.h"
 
 namespace Vector4
 {
@@ -59,44 +59,32 @@ namespace Vector4
 
 	Vector4 Vector4::operator+(const Vector4 & v) const
 	{
-		Vector4 v4(x + v.x, y + v.y, z + v.z, w + v.w);
-
-		return v4;
+		return Vector4(x + v.x, y + v.y, z + v.z, w + v.w);
 	}
 
 	Vector4 Vector4::operator-(Vector4 & v)
 	{
-		Vector4 v4(-x, -y, -z, -w);
-
-		return v4;
+		return Vector4(-x, -y, -z, -w);
 	}
 
 	Vector4 Vector4::operator-(const Vector4 & v) const
 	{
-		Vector4 v4(x - v.x, y - v.y, z - v.z, w - v.w);
-
-		return v4;
+		return Vector4(x - v.x, y - v.y, z - v.z, w - v.w);
 	}
 
 	Vector4 Vector4::operator*(float num) const
 	{
-		Vector4 v(x * num, y * num, z * num, w * num);
-
-		return v;
+		return Vector4(x * num, y * num, z * num, w * num);
 	}
 
 	Vector4 Vector4::operator/(float num) const
 	{
-		Vector4 v4(x / num, y / num, z / num, w / num);
-
-		return v4;
+		return Vector4(x / num, y / num, z / num, w / num);
 	}
 
 	Vector4 Vector4::Set(float newX, float newY, float newZ, float newW)
 	{
-		Vector4 v4(newX, newY, newZ, newW);
-
-		return v4;
+		return Vector4(newX, newY, newZ, newW);
 	}
 
 	float Vector4::Length(const Vector4 & v)

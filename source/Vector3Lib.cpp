@@ -1,4 +1,4 @@
-#include "../header/Vector3Lib.h"
+#include "Vector3Lib.h"
 
 namespace Vector3
 {
@@ -61,37 +61,27 @@ namespace Vector3
 
 	Vector3 Vector3::operator+(const Vector3 & v) const
 	{
-		Vector3 v3(x + v.x, y + v.y, z + v.z);
-
-		return v3;
+		return Vector3(x + v.x, y + v.y, z + v.z);
 	}
 
 	Vector3 Vector3::operator-(Vector3 & v)
 	{
-		Vector3 v3(-x, -y, -z);
-
-		return v3;
+		return Vector3(-x, -y, -z);
 	}
 
 	Vector3 Vector3::operator-(const Vector3 & v) const
 	{
-		Vector3 v3(x - v.x, y - v.y, z - v.z);
-
-		return v3;
+		return Vector3(x - v.x, y - v.y, z - v.z);
 	}
 
 	Vector3 Vector3::operator*(float num) const
 	{
-		Vector3 v3(x * num, y * num, z * num);
-
-		return v3;
+		return Vector3(x * num, y * num, z * num);
 	}
 
 	Vector3 Vector3::operator/(float num) const
 	{
-		Vector3 v3(x / num, y / num, z / num);
-
-		return v3;
+		return Vector3(x / num, y / num, z / num);
 	}
 
 	//Calculates the Length
@@ -127,9 +117,7 @@ namespace Vector3
 		float theta = atan2(y, x);
 		float phi = acos(z / radius);
 
-		Vector3 v3(radius, theta, phi);
-
-		return v3;
+		return Vector3(radius, theta, phi);
 	}
 
 	//Converts from Cartesian to Spherical Coords
@@ -141,17 +129,13 @@ namespace Vector3
 		float XPhi = cos(phi);
 		float YPhi = sin(phi);
 
-		Vector3 v3((XTheta * XPhi * radius), (YTheta * XPhi * radius), (YPhi * radius));
-
-		return v3;
+		return Vector3((XTheta * XPhi * radius), (YTheta * XPhi * radius), (YPhi * radius));
 	}
 
 	//Calculates the crossproduct of 2 vector 2's
 	Vector3 Vector3::CrossProduct(const Vector3 & v1, const Vector3 & v2)
 	{
-		Vector3 v3(v1.y * v2.z - v1.z * v2.y, v1.z * v2.x - v1.x * v2.z, v1.x * v2.y - v1.y * v2.x);
-
-		return v3;
+		return Vector3(v1.y * v2.z - v1.z * v2.y, v1.z * v2.x - v1.x * v2.z, v1.x * v2.y - v1.y * v2.x);
 	}
 
 	//Calculates the dot product of 2 vector 2's
